@@ -1,0 +1,159 @@
+:root{
+	/*variables*/
+	--lightbc:rgb(221, 255, 255);
+	--darkbc: rgb(105, 120, 124);
+	--header_colour:rgb(105, 120, 124);
+	--header_text:rgb(221, 255, 255);
+}
+
+.links{
+    background-color:rgb(105, 120, 124, 0.9);
+    color:var(--lightbc);
+    margin:0;
+    padding: 20px;
+}
+
+.links ul{
+    background-color:var(--darkbc);
+    color:var(--lightbc);
+    list-style-type: none;
+    text-align:center;
+    margin:0;
+    padding:0;
+}
+
+.links li{
+    display:inline-block;
+    letter-spacing: 0px;
+}
+
+.links a{
+    text-decoration:none;
+    color:var(--lightbc);
+    width:130px;
+    display:block;
+    font-size:17px;
+    text-transform:none;
+    padding:15px;
+    letter-spacing: 0px;
+}
+
+.body{
+    text-align:left;
+    background-color:rgb(221, 255, 255, 0.95);
+    border: 12px double var(--darkbc);
+	color:var(--darkbc);
+	padding: 20px;
+	margin: 10px auto 10px auto;
+    width: 50%;
+    text-transform:none;
+    letter-spacing:0px;
+    font-size:17px;
+}
+
+.banner{
+	background-color:var(--darkbc);
+	color:var(--darkbc);
+	background-color:var(--lightbc);
+	background-size:cover;
+	text-align:center;
+	font-size:33px;
+	background-position:center;
+	text-transform:none;
+	margin:0px;
+	padding:20px;
+}
+
+.titleText{
+	text-transform:lowercase;
+	text-align:center;
+	position:absolute;
+	font-size: 69px;
+}
+
+.titleText a{
+	color:var(--header_text);
+}
+
+.titleText a:hover{
+	color:var(--darkbc);
+	background:var(--lightbc);
+	box-shadow:0 0 0px var(--lightbc), 0 0 0px var(--lightbc), 0 0 0px var(--lightbc);
+	transition-delay: 0.0s;
+}
+
+header{
+	background:var(--header_colour);
+	margin:0px;
+	color:var(--header_text);
+	padding: 0px;
+	text-align:left;
+	height:170px; 
+	background-color: var(--header_colour); 
+	background-size:100%; 
+	background-position-y:-200px;
+}
+
+body{
+	margin:0;
+	font-family:consolas;
+	text-transform:uppercase;
+    letter-spacing:4px;
+    background-color: #fff;
+    background: url("CityBG.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+nav{
+	/* background:rgb(255, 255, 255); */
+	margin:0px;
+	padding:40px 40px 40px 40px;
+}
+nav ul{
+	margin:0px;
+	padding:0px;
+	list-style-type:none;
+	opacity:1;
+}
+
+nav ul li{
+	display:inline-block;
+	padding: 3px 10px 0px 10px;
+	margin: 2px 10px;
+	opacity:1;
+	float: right;
+}
+
+nav ul li a{
+	margin:0px;
+	text-decoration:none;
+	opacity:1;
+}
+
+nav ul li u{
+	padding :13px;
+}
+
+.navList{
+	padding: 13px;
+	/*border-radius:5px;*/
+	color:var(--header_text);
+}
+
+.navList:hover{
+	color:var(--darkbc);
+	background:var(--lightbc);
+	box-shadow:0 0 0px var(--lightbc), 0 0 0px var(--lightbc), 0 0 0px var(--lightbc);
+	transition-delay: 0.0s;
+}
+
+footer{
+	margin:0px;
+	background:var(--darkbc);
+	padding:15px;
+	color:var(--lightbc);
+	text-align:center;
+}

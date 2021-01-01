@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang = "en">
+	<head class>
+		<title>Jack Gao</title>
+		<link href = "main.css" rel = "stylesheet" type = "text/css"/>
+		<link href = "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel = "stylesheet" type = "text/css"/>
+		<meta charset = "UTF-8">
+	</head>
+		
+	<body>
+		<header class = "IMG">
+			<nav>
+				<ul>
+					<!--<li class = "logo"><a href = "index.html">Website Logo</a></li>-->
+					<li>
+						<a href = "About.html" class = "navList">
+							<b>About</b>
+						</a>
+					</li>
+					<li class = "titleText">
+						<a href = "index.html">jackgao1540.com</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div>
+			<p class = "banner">Projects</p>
+				<div class = "box" id = "n1">
+					<h3 class = "leftTitle">Tesla stock price prediction</h3>
+					<hr>
+					<p class = "leftPar">
+						<em>Using long short-term memory neural networks and the 
+							python library Keras to predict changes in the TSLA 
+							stock price. The model takes the last 60 days of close prices 
+							as input and outputs a prediction of how the stock's 
+							close price will change in the following day. The 
+							result of training this network was a Keras model
+							that learned to predict changes in the TSLA close 
+							price with a root mean square error of 0.170, which
+							is pretty accurate.</em>
+					</p>
+					<script src = "LSTMJS.js"></script>
+				</div>
+				<div class = "box"  id = "n2">
+					<h3 class = "rightTitle">What type of breast cell is this?</h3>
+					<hr>
+					<p class = "rightPar">
+						<em>Using convolutional neural networks and Tensorflow, 
+							this python program is trained to differentiate 
+							between three types of breast cells: MCF-7, MCF-10A, 
+							and MDA-MB-231, the latter two being cancerous.</em>
+							<br>
+						<em>The training dataset was obtained from 
+							<a href = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6415833/"  target=”_blank”>this article.</a></em>
+					</p>
+					<script src = "LSTMJS.js"></script>
+				</div>
+		</div>
+		<!--Code for the content blocks, make more functional with javascript later-->
+		<footer>Jack Gao © 2020</footer>
+	</body>
+</html>

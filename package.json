@@ -1,0 +1,25 @@
+{
+  "type":"module",
+  "name": "jackgaowebsite",
+  "version": "1.0.0",
+  "description": "my website",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jack",
+    "gao",
+    "jackgao",
+    "website",
+    "programming",
+    "coding",
+    "projects",
+    "project",
+    "1540",
+    "jackgao1540"
+  ],
+  "url": "https://github.com/jackgao1540/Website.git",
+  "author": "Jack Gao",
+  "license": "ISC"
+}

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang = "en">
+	<head class>
+		<title>Jack Gao</title>
+		<link href = "main.css" rel = "stylesheet" type = "text/css"/>
+		<meta charset = "UTF-8">
+	</head>
+		
+	<body>
+		<canvas id="gc" width="800" height="800"></canvas>
+		<script>
+			window.onload=function() {
+				canv=document.getElementById("gc");
+				ctx=canv.getContext("2d");
+				document.addEventListener("keydown",keyPush);
+				setInterval(game,1000/15);
+			}
+			paused = false;
+			px=py=10;
+			blockSize=40
+			dimensions=20;
+			ax=ay=Math.floor(Math.random()*dimensions);
+			xv=yv=0;
+			tail=[];
+			defaultLen = 13;
+			tailLen = defaultLen;
+			function game() {
+				if(paused == false){
+					px+=xv;
+					py+=yv;
+					if(px<0) {
+						px= dimensions-1;
+					}
+					if(px>dimensions-1) {
+						px= 0;
+					}
+					if(py<0) {
+						py= dimensions-1;
+					}
+					if(py>dimensions-1) {
+						py= 0;
+					}
+					ctx.fillStyle="black";
+					ctx.fillRect(0,0,canv.width,canv.height);
+				
+					ctx.fillStyle="lime";
+					for(var i=0;i<tail.length;i++) {
+						ctx.fillRect(tail[i].x*blockSize,tail[i].y*blockSize,blockSize-2,blockSize-2);
+						if(tail[i].x==px && tail[i].y==py) {
+							tailLen = defaultLen;
+						}
+					}
+					tail.push({x:px,y:py});
+					while(tail.length>tailLen) {
+						tail.shift();
+					}
+				
+					if(ax==px && ay==py) {
+						tailLen++;
+						ax=Math.floor(Math.random()*dimensions);
+						ay=Math.floor(Math.random()*dimensions);
+					}
+					ctx.fillStyle="red";
+					ctx.fillRect(ax*blockSize,ay*blockSize,blockSize-2,blockSize-2);
+				}
+			}
+			function keyPush(evt) {
+				switch(evt.keyCode) {
+					case 37:
+						if(xv != 1){xv=-1;yv=0;}
+						break;
+					case 38:
+						if(yv != -1){xv=0;yv=-1;}
+						break;
+					case 39:
+						if(xv != -1){xv=1;yv=0;}
+						break;
+					case 40:
+						if(yv != -1){xv=0;yv=1;}
+						break;
+					case  27:
+						if(paused == true)paused = false;
+						else paused = true;
+						break;
+				}
+			}
+		</script>
+	</body>
+</html>
