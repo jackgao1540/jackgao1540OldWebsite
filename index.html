@@ -39,7 +39,35 @@
 							price with a root mean square error of 0.170, which
 							is pretty accurate.</em>
 					</p>
-					<script src = "LSTMJS.js"></script>
+					<!-- slideshow code-->
+					<div class="slidershow middle1">
+						<div class="slides">
+						  <input type="radio" name="r" id="r1" checked>
+						  <input type="radio" name="r" id="r2">
+						  <input type="radio" name="r" id="r3">
+						  <input type="radio" name="r" id="r4">
+						  <div class="slide1 s1">
+							<img src="/LSTM Screenshots/graph 0.png" alt="">
+						  </div>
+						  <div class="slide1">
+							<img src="/LSTM Screenshots/graph 1.png" alt="">
+						  </div>
+						  <div class="slide1">
+							<img src="/LSTM Screenshots/graph 2.png" alt="">
+						  </div>
+						  <div class="slide1">
+							<img src="/LSTM Screenshots/graph 3.png" alt="">
+						  </div>
+						</div>
+				  
+						<div class="navigation1">
+						  <label for="r1" class="bar1"></label>
+						  <label for="r2" class="bar1"></label>
+						  <label for="r3" class="bar1"></label>
+						  <label for="r4" class="bar1"></label>
+						</div>
+					  </div>
+					<!-- slideshow code-->
 				</div>
 				<div class = "box"  id = "n2">
 					<h3 class = "rightTitle">What type of breast cell is this?</h3>
@@ -53,10 +81,56 @@
 						<em>The training dataset was obtained from 
 							<a href = "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6415833/"  target=”_blank”>this article.</a></em>
 					</p>
-					<script src = "LSTMJS.js"></script>
+					<!-- slideshow code-->
+					<div class="slidershow middle2">
+						<div class="slides">
+						  <input type="radio" name="r" id="r1" checked>
+						  <input type="radio" name="r" id="r2">
+						  <input type="radio" name="r" id="r3">
+						  <input type="radio" name="r" id="r4">
+						  <input type="radio" name="r" id="r5">
+						  <div class="slide2 s1">
+							<img src="/CNN Screenshots/pred1.PNG" alt="">
+						  </div>
+						  <div class="slide2">
+							<img src="/CNN Screenshots/pred2.PNG" alt="">
+						  </div>
+						  <div class="slide2">
+							<img src="/CNN Screenshots/pred3.PNG" alt="">
+						  </div>
+						  <div class="slide2">
+							<img src="/CNN Screenshots/pred4.PNG" alt="">
+						  </div>
+						  <div class="slide2">
+							<img src="/CNN Screenshots/pred5.PNG" alt="">
+						  </div>
+						</div>
+				  
+						<div class="navigation2">
+						  <label for="r1" class="bar2"></label>
+						  <label for="r2" class="bar2"></label>
+						  <label for="r3" class="bar2"></label>
+						  <label for="r4" class="bar2"></label>
+						  <label for="r5" class="bar2"></label>
+						</div>
+					  </div>
+					<!-- slideshow code-->
 				</div>
-		</div>
-		<!--Code for the content blocks, make more functional with javascript later-->
+				<div class = "box" id = "n3">
+					<canvas id="gc" width = "390" height = "390"></canvas>
+					<script src = "snakeGame.js"></script>
+					<h3 class = "leftTitle">Simple snake game</h3>
+					<hr>
+					<p class = "leftPar">
+						<em id = "HS">One of my first projects when I learned javascript and web development.
+							Use the arrow keys to move, try to collect as many pink squares as possible before 
+							colliding with yourself or the walls.
+						</em>
+					</p>
+				</div>
+				
+			</div>
+		
 		<footer>Jack Gao © 2020</footer>
 	</body>
 </html>
