@@ -25,6 +25,14 @@ xv=yv=0;
 tail=[];
 defaultLen = 5;
 tailLen = defaultLen;
+
+function inSnake(x, y){
+    for(var i = 0; i < tail.length; i++){
+        if(x == tail[i].x && y == tail[i].y)return true;
+    }
+    return false;
+}
+
 function game() {
     if(paused == false){
         px+=xv;
@@ -32,32 +40,32 @@ function game() {
         if(px<0) {
             var hs = document.getElementById('HS');
             highscore = Math.max(highscore,tailLen);
-            if(highscore == 5)highscore = 0;
-            hs.innerHTML = "One of my first projects when I learned javascript and web development. Use the arrow keys to move, try to collect as many pink squares as possible before colliding with yourself or the walls. <br> <b>High score:"  + highscore + "</b>.";
+            if(highscore == defaultLen)highscore = 0;
+            hs.innerHTML = "One of my first projects when I learned javascript and web development. Use the arrow keys to move, try to collect as many pink squares as possible before colliding with yourself or the walls. Press escape to pause. <br><br>  <b>High score:"  + highscore + "</b>.";
             tailLen = defaultLen;
             px= dimensions-1;
         }
         if(px>dimensions-1) {
             var hs = document.getElementById('HS');
             highscore = Math.max(highscore,tailLen);
-            if(highscore == 5)highscore = 0;
-            hs.innerHTML = "One of my first projects when I learned javascript and web development. Use the arrow keys to move, try to collect as many pink squares as possible before colliding with yourself or the walls. <br> <b>High score:"  + highscore + "</b>.";
+            if(highscore == defaultLen)highscore = 0;
+            hs.innerHTML = "One of my first projects when I learned javascript and web development. Use the arrow keys to move, try to collect as many pink squares as possible before colliding with yourself or the walls. Press escape to pause. <br> <br> <b>High score:"  + highscore + "</b>.";
             tailLen = defaultLen;
             px= 0;
         }
         if(py<0) {
             var hs = document.getElementById('HS');
             highscore = Math.max(highscore,tailLen);
-            if(highscore == 5)highscore = 0;
-            hs.innerHTML = "One of my first projects when I learned javascript and web development. Use the arrow keys to move, try to collect as many pink squares as possible before colliding with yourself or the walls. <br> <b>High score:"  + highscore + "</b>.";
+            if(highscore == defaultLen)highscore = 0;
+            hs.innerHTML = "One of my first projects when I learned javascript and web development. Use the arrow keys to move, try to collect as many pink squares as possible before colliding with yourself or the walls. Press escape to pause. <br><br>  <b>High score:"  + highscore + "</b>.";
             tailLen = defaultLen;
             py= dimensions-1;
         }
         if(py>dimensions-1) {
             var hs = document.getElementById('HS');
             highscore = Math.max(highscore,tailLen);
-            if(highscore == 5)highscore = 0;
-            hs.innerHTML = "One of my first projects when I learned javascript and web development. Use the arrow keys to move, try to collect as many pink squares as possible before colliding with yourself or the walls. <br> <b>High score:"  + highscore + "</b>.";
+            if(highscore == defaultLen)highscore = 0;
+            hs.innerHTML = "One of my first projects when I learned javascript and web development. Use the arrow keys to move, try to collect as many pink squares as possible before colliding with yourself or the walls. Press escape to pause. <br> <br> <b>High score:"  + highscore + "</b>.";
             tailLen = defaultLen;
             py= 0;
         }
@@ -74,8 +82,8 @@ function game() {
             if(tail[i].x==px && tail[i].y==py) {
                 var hs = document.getElementById('HS');
                 highscore = Math.max(highscore,tailLen);
-                if(highscore == 5)highscore = 0;
-                hs.innerHTML = "One of my first projects when I learned javascript and web development. Use the arrow keys to move, try to collect as many pink squares as possible before colliding with yourself or the walls. <br> <b>High score:"  + highscore + "</b>.";
+                if(highscore == defaultLen)highscore = 0;
+                hs.innerHTML = "One of my first projects when I learned javascript and web development. Use the arrow keys to move, try to collect as many pink squares as possible before colliding with yourself or the walls. Press escape to pause. <br> <br> <b>High score:"  + highscore + "</b>.";
                 tailLen = defaultLen;
             }
         }
@@ -88,6 +96,10 @@ function game() {
             tailLen++;
             ax=Math.floor(Math.random()*dimensions);
             ay=Math.floor(Math.random()*dimensions);
+            while(inSnake(ax, ay)){
+                ax=Math.floor(Math.random()*dimensions);
+                ay=Math.floor(Math.random()*dimensions);
+            }
         }
         ctx.fillStyle="pink";
         ctx.fillRect(ax*blockSize + tr,ay*blockSize + tr,blockSize-mn,blockSize-mn);
