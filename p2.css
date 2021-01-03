@@ -1,3 +1,24 @@
+/*
+programmed by Jack Gao, 2020
+	 /|		 ___-------------___
+	 ||		/                   \   /----
+	 ||		|___________________ |\/
+	 ||		|  *            *    |/\
+	 ||		|--------------------|  \  ***
+	 ||		\___________________/       |
+    _||_     	|     \ \/ /     |      |
+    (E)---------|      \ \/      |------|
+	 ||         |       \ \      |
+	 ||         |----------------|
+	 || 		|       /  \     |
+	^^ 	        |______/____\____|				
+				  /            \ 
+				 /              \
+			   _/                \_
+NC INC 2020
+*/
+
+
 :root{
 	/*variables*/
 	--lightbc:rgb(221, 255, 255);
@@ -7,7 +28,7 @@
 }
 
 .links{
-    background-color:rgb(105, 120, 124, 0.9);
+    background-color:rgb(105, 120, 124, 0.97);
     color:var(--lightbc);
     margin:0;
     padding: 20px;
@@ -40,7 +61,7 @@
 
 .body{
     text-align:left;
-    background-color:rgb(221, 255, 255, 0.95);
+    background-color:rgb(221, 255, 255, 0.97);
     border: 12px double var(--darkbc);
 	color:var(--darkbc);
 	padding: 20px;

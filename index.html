@@ -1,3 +1,22 @@
+<!--
+programmed by Jack Gao, 2020
+	 /|		 ___-------------___
+	 ||		/                   \   /----
+	 ||		|___________________ |\/
+	 ||		|  *            *    |/\
+	 ||		|--------------------|  \  ***
+	 ||		\___________________/       |
+    _||_     	|     \ \/ /     |      |
+    (E)---------|      \ \/      |------|
+	 ||         |       \ \      |
+	 ||         |----------------|
+	 || 		|       /  \     |
+	^^ 	        |______/____\____|				
+				  /            \ 
+				 /              \
+			   _/                \_
+NC INC 2020
+-->
 <!doctype html>
 <html lang = "en">
 	<head class>
@@ -25,7 +44,33 @@
 		</header>
 		<div>
 			<p class = "banner">Projects</p>
+				<div class = "box" id = "n0"> 
+					<a class = "bigLink" href = "https://github.com/jackgao1540/Segment-Tree-Visualisation-Lazy-Propagation-Javascript">
+					<h2 class = "centered_title">Segment Tree Lazy Propagation Visualization</h2>
+					<hr>				
+					<canvas id = "segTree" width = "1000" height = "500"></canvas>
+					<form class = "setup" id = "form" onsubmit="return false">
+						<label for="numberSize">Enter integral number of array elements 5&le;n&le;16</label>
+						<input type="number" min="5" max="16" id="numberSize" value = "8" required oninput="(!validity.rangeOverflow||(value=16)) && (!validity.rangeUnderflow||(value=5)) && (!validity.stepMismatch||(value=parseInt(this.value)));">
+						<br>
+						<label for="numbers">Enter N integers, between [0, 50] for simplicity, separated by underscores "_".</label>
+						<br>
+						<input type = "text" id = "numbers" required value = "1_2_3_4_5_6_7_8">
+						<br>
+						<div class = "segDesc">
+							<p >This program will generate a <em><a href = "https://en.wikipedia.org/wiki/Segment_tree">segment tree</a></em> with the given values. The user will be able to update 
+								and query the segment tree. It uses <em><a href = "https://www.geeksforgeeks.org/lazy-propagation-in-segment-tree/">lazy propagation</a></em> in order to make updates and queries more
+								efficient.
+							</p>
+						</div>
+						<br>
+						<button type = "submit">Submit</button>
+						<script defer src= "SegmentTree.js"></script>
+					</form>
+					</a>
+				</div>
 				<div class = "box" id = "n1">
+					<a class = "bigLink" href = "https://github.com/jackgao1540/LSTM_TSLA">
 					<h3 class = "leftTitle">Tesla stock price prediction</h3>
 					<hr>
 					<p class = "leftPar">
@@ -68,8 +113,10 @@
 						</div>
 					  </div>
 					<!-- slideshow code-->
+					</a>
 				</div>
 				<div class = "box"  id = "n2">
+					<a class = "bigLink" href = "https://github.com/jackgao1540/group4DeepLearningProject">
 					<h3 class = "rightTitle">What type of breast cell is this?</h3>
 					<hr>
 					<p class = "rightPar">
@@ -120,8 +167,10 @@
 						</div>
 					  </div>
 					<!-- slideshow code-->
+					</a>
 				</div>
 				<div class = "box" id = "n3">
+					<a href = "https://github.com/jackgao1540/Snake-Game">
 					<canvas id="gc" width = "390" height = "390"></canvas>
 					<script src = "snakeGame.js"></script>
 					<h3 class = "leftTitle">Simple snake game</h3>
@@ -132,8 +181,31 @@
 							colliding with yourself or the walls. Press escape to pause.
 						</em>
 					</p>
+					</a>
 				</div>
-				
+				<div class = "box" id = "n4">
+					<a href = "https://github.com/jackgao1540/minesweeper-string-game-java">
+					<h3 class = "rightTitle">Minesweeper - Java string game</h3>
+					<hr>
+					<p class = "rightPar">
+						A project I made in grade 10 for my string game project, uses ASCII
+							characters to produce crude graphics for a minesweeper game.
+							Please ignore any unusual or odd jokes that were programmed into the game, 
+							as it was made some time ago.
+							<br>
+							<br>
+							. indicates an empty square
+							<br>
+							F indicates a player-flagged square
+							<br>
+							B indicates a bomb
+							<br>
+							# indicates the number of adjacent mines to that square.
+					</p>
+					<img id = "msIMG" src = "minesweeper_ss.PNG">
+					<img id = "node" src = "node.gif">
+					</a>
+				</div>
 			</div>
 		
 		<footer>Jack Gao © 2020</footer>
